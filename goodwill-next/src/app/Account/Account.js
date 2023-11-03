@@ -1,18 +1,22 @@
 class Account {
 
 
-    constructor(username, password){
+    constructor(username, password, email, phone){
         this.username = username;
         this.password = password;
+        this.email = email;
+        this.phone = phone;
         this.role = AccountPermissions.User 
-
     }
+
     assignRole(role){
         this.role = role
     }
     checkPermsission(){
         return this.role;
     }
+
+    //ToDo Add method to ensure that username is not taken
 
     validatePassword(Password){
         //Reject if Password is too short
@@ -36,10 +40,7 @@ class Account {
             }
         }
         //Reject if there are no numbers, or approve if there are numbers
-        return NumberCount > 0;
-        
-
-
+        return NumberCount > 0; 
 
     }
 
