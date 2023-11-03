@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { printHello } from './page.server';
+import { printHello } from './server';
 
 export default function Home() {
   return (
