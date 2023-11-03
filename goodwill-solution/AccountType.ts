@@ -1,4 +1,6 @@
 enum AccountPermissions{
-    Employee,
-    Admin
+    Employee = "Employee",
+    Admin = "Admin",
+    User = "User",
+    Counsel = "Counsel"
 }
