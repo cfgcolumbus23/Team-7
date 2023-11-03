@@ -1,3 +1,5 @@
-function printHelloOnServer() {
-  console.log('Hello from server');
+export function printHelloOnServer() {
+    if (import.meta.env.SSR) {
+        console.log('Hello from server')
+    }
 }
