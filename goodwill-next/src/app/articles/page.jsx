@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import React from "react";
 
@@ -46,14 +45,4 @@ export default function Page() {
       </div>
     </div>
   );
-=======
-export default function Page() {
-  return (
-    <div>
-        <div className="bg-goodwill-blue mt-40">
-            <h1>Hello</h1>
-        </div>
-    </div>
-  )
->>>>>>> 8fa80cf69658c42acfd087e5183e3a9e5aaa41d6
 }
