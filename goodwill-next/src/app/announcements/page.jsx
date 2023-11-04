@@ -19,26 +19,26 @@ export default function Page() {
   }
 
   return (
-    <div className="">
+    <div className="bg-blue-300">
       <h1 className="bg-goodwill-blue text-6xl mt-24 pb-12 text-white text-center">
         Learn More <br />
         About Goodwill
       </h1>
       <div className="flex flex-col md:flex-row justify-center items-center content-center mt-32 gap-8 first-letter:mt-48 mb-96 p-1 mx-4">
         <div
-          className="text-xl pt-12 md:pt-20 rounded-lg border-2 p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 text-center w-96 md:w-58 md:h-48 h-32 cursor-pointer"
+          className="text-xl pt-12 md:pt-20 rounded-lg border-4 border-black p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 text-center w-96 md:w-58 md:h-48 h-32 cursor-pointer"
           onClick={handleNewsClick}
         >
           Company
         </div>
         <button
-          className="text-xl rounded-lg border-2 p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 w-96 md:w-58 md:h-48 h-32"
+          className="text-xl rounded-lg border-4 border-black  p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 w-96 md:w-58 md:h-48 h-32"
           onClick={handleCareerClick}
         >
           Careers
         </button>
         <button
-          className="text-xl rounded-lg border-2 p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 w-96 md:w-58 md:h-48 h-32"
+          className="text-xl rounded-lg border-4 border-black  p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 w-96 md:w-58 md:h-48 h-32"
           onClick={handleOppoClick}
         >
           Opportunities
@@ -46,7 +46,7 @@ export default function Page() {
       </div>
       <div
         ref={newsRef}
-        className="grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center items-center justify-center"
+        className="bg-blue-400 border-y-4 border-blue-400 border pl-10 pr-10 grid grid-cols-3 mt-96 pt-72 pb-72 mb-96 gap-4 text-center items-center justify-center"
       >
         <div>
           <NewsCard
@@ -70,7 +70,7 @@ export default function Page() {
       </div>
       <div
         ref={careerRef}
-        className="grid grid-cols-3 mt-96 pt-52  mb-96 gap-4 text-center"
+        className="bg-blue-400 border-y-4 border-blue-400 pl-10 pr-10 border grid grid-cols-3 mt-96 pt-72 pb-72 mb-96 grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center"
       >
         <div>
           <NewsCard
@@ -94,7 +94,7 @@ export default function Page() {
       </div>
       <div
         ref={courseRef}
-        className="grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center"
+        className="bg-blue-400 border-y-4 border-blue-400 pl-10 pr-10 border grid grid-cols-3 mt-96 pt-72 pb-72 mb-0 grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center"
       >
         <div>
           <NewsCard
