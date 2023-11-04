@@ -14,6 +14,8 @@ class chatStructure{
         this.message = newMessage;
     }
 
+   
+
     getJSON(){
         return JSON.stringify(this);
     }
