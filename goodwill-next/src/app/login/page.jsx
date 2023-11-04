@@ -39,13 +39,13 @@ export default function Page() {
           <form className='flex flex-col gap-10' onSubmit={(e) => onSubmit(e)}>
             <input
               name='username'
-              className='p-4 rounded-lg bg-white border border-gray-300 border-width-19 focus:outline-none'
+              className='text-black p-4 rounded-lg bg-white border border-gray-300 border-width-19 focus:outline-none'
               type='text'
               placeholder='Username...'
             />
             <input
               name='password'
-              className='p-4 rounded-lg bg-white focus:outline-none border border-gray-300 border-width-19'
+              className='text-black p-4 rounded-lg bg-white focus:outline-none border border-gray-300 border-width-19'
               type='password'
               placeholder='Password...'
             />
