@@ -19,7 +19,7 @@ export default function PersonalMessage() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="w-2/5 h-3/4 overflow-y-scroll overflow-hidden bg-goodwill-black rounded-md">
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 text-black mx-auto">
           {userMessages.map((message, index) => (
             <Message key={index} message={message} userIcon={currentUserIcon} />
           ))}
@@ -34,7 +34,7 @@ export default function PersonalMessage() {
             value={message}
             type="text"
             placeholder="Enter your message..."
-            className="focus:outline-none p-3 rounded-lg rounded-r-none bg-white"
+            className="focus:outline-none p-3 rounded-lg rounded-r-none bg-white text-black"
           />
           <button
             className="p-2 text-black bg-white font-bold rounded-xl h-12 rounded-l-none -ml-4 "

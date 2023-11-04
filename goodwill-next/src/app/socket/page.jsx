@@ -17,7 +17,11 @@ export default function Home() {
   const [roomId, setRoomId] = useState('')
 
   var socket
-  socket = io('http://localhost:3001', { transports: ['websocket'] })
+  socket = io(
+    'http://localhost:3001',
+    { transports: ['websocket'] },
+    { 'force new connection': true }
+  )
 
   /**
    * Handles the join button click event.

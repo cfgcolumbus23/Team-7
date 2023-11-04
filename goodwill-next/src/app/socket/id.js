@@ -1,4 +1,4 @@
-let initialId = 0;
+let initialId = 345;
 let rooms = [];
 
 const createRoom = (id, users) => {
@@ -40,7 +40,7 @@ const matchUserstoRoom = (users) => {
 
     if (!room) {
         createId();
-        room = createRoom(initialId, users);
+        room = createRoom(345, users);
         rooms.push(room);
     }
 

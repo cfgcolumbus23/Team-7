@@ -36,7 +36,7 @@ export default function NavBarMobile({ Mobile, setMobile }) {
         </button>
         <button type="button" onClick={() => router.push("/announcements")}>
           <li onClick={() => setMobile(!Mobile)} className="cursor-pointer">
-            Announcments
+            Announcements
           </li>
         </button>
       </ul>

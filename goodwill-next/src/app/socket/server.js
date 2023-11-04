@@ -30,17 +30,14 @@ io.on("connection", (socket) => {
     console.log(socket)
     console.log("A user connected:", socket.id);
     socket.on("join_room", (username, otherUser) => {
-
-        const room = matchUserstoRoom([username, otherUser]);
-
-        console.log(`user with id-${socket.id} joined room - ${room.id}`);
-        socket.join(room.id);
+        console.log(`user with id-${socket.id} joined room - 345`);
+        socket.join(345);
     });
 
     socket.on("send_msg", (data) => {
         // console.log(data, "DATA");
         //This will send a message to a specific room ID
-        socket.to(data.roomId).emit("receive_msg", data);
+        socket.to(345).emit("receive_msg", data);
     });
 
     socket.on("disconnect", () => {
