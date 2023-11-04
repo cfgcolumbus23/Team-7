@@ -11,10 +11,6 @@ export default function Messages() {
       </button>
       <MessageCard FriendName="Kevin" Date="11/03/2023" />
       <MessageCard FriendName="Nick" Date="11/03/2023" />
-      <MessageCard FriendName="Nick" Date="11/03/2023" />
-      <MessageCard FriendName="Nick" Date="11/03/2023" />
-      <MessageCard FriendName="Nick" Date="11/03/2023" />
-      <MessageCard FriendName="Nick" Date="11/03/2023" />
     </div>
   );
 }
