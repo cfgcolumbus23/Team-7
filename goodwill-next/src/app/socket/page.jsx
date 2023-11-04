@@ -3,20 +3,23 @@ import styles from './page.module.css'
 import { io } from 'socket.io-client'
 import { useState } from 'react'
 import ChatPage from './chat'
+import { matchUserstoRoom } from './id'
 
 export default function Home() {
   const [showChat, setShowChat] = useState(false)
   const [userName, setUserName] = useState('')
   const [showSpinner, setShowSpinner] = useState(false)
-  const [roomId, setroomId] = useState('')
+  const [otherUser, setOtherUser] = useState('')
+  const [roomId, setRoomId] = useState('')
 
   var socket
   socket = io('http://localhost:3001', { transports: ['websocket'] })
 
   const handleJoin = () => {
-    if (userName !== '' && roomId !== '') {
-      console.log(userName, 'userName', roomId, 'roomId')
-      socket.emit('join_room', roomId)
+    if (userName !== '' && otherUser !== '') {
+      //   console.log(userName, 'userName', roomId, 'roomId')
+      socket.emit('join_room', userName, otherUser)
+      setRoomId(matchUserstoRoom(userName, otherUser).id)
       setShowSpinner(true)
       // You can remove this setTimeout and add your own logic
       setTimeout(() => {
@@ -24,7 +27,9 @@ export default function Home() {
         setShowSpinner(false)
       }, 4000)
     } else {
-      alert('Please fill in Username and Room Id')
+      alert(
+        'Please fill in your username and the username of the person you want to chat with'
+      )
     }
   }
 
@@ -44,8 +49,8 @@ export default function Home() {
         <input
           className={styles.main_input}
           type='text'
-          placeholder='room id'
-          onChange={(e) => setroomId(e.target.value)}
+          placeholder='other user'
+          onChange={(e) => setOtherUser(e.target.value)}
           disabled={showSpinner}
         />
         <button className={styles.main_button} onClick={() => handleJoin()}>
@@ -57,7 +62,12 @@ export default function Home() {
         </button>
       </div>
       <div style={{ display: !showChat ? 'none' : '' }}>
-        <ChatPage socket={socket} roomId={roomId} username={userName} />
+        <ChatPage
+          socket={socket}
+          roomId={roomId}
+          username={userName}
+          otherUser={otherUser}
+        />
       </div>
     </div>
   )
