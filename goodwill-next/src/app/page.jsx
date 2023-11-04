@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/navigation";
 import Tiles from "./components/Tiles";
 
 export default function Home() {
@@ -17,10 +16,8 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex flex-col overflow-x-hidden items-center justify-between p-24">
       <div>
-        <br />
-        <br />
         <Tiles />
       </div>
     </main>

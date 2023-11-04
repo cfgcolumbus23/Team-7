@@ -8,7 +8,14 @@ const Navbar = ({ mobile, setMobile }) => {
     <nav className="bg-goodwill-blue p-4 fixed w-screen top-0">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/Goodwill-Logo.png" alt="Logo" className="w-40 ml-4" />
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            <img src="/Goodwill-Logo.png" alt="Logo" className="w-40 ml-4" />
+          </button>
         </div>
         <h1 className="hidden xl:inline-block text-white text-2xl font-semibold text-center italic">
           We believe in the power of work and opportunity for all
