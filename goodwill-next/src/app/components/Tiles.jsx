@@ -51,13 +51,9 @@ const Tile = () => {
               alt="picture"
               className="h-2/3 w-full rounded-md"
             />
-<<<<<<< HEAD
-            <p className="text-black mt-1">Click here to look for job opportunities.</p>
-=======
             <p className="text-black text-4xl md:text-2xl lg:text-3xl mt-3 text-center">
               JOB OPPORTUNITIES
             </p>
->>>>>>> refs/remotes/origin/main
           </div>
         </div>
       </a>
