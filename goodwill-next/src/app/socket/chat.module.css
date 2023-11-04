@@ -7,12 +7,13 @@
   flex-direction: column;
 }
 .chat_border {
-  border: 5px solid blue;
+  border: 5px solid lightgrey;
   padding: 5px;
+  border-radius: 10px;
 }
 .chat_input {
   height: 2rem;
-  width: 15rem;
+  width: 30rem;
   padding: 5px;
 }
 .chat_button {
