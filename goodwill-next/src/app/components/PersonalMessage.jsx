@@ -34,7 +34,7 @@ export default function PersonalMessage() {
             value={message}
             type="text"
             placeholder="Enter your message..."
-            className="focus:outline-none p-3 rounded-lg rounded-r-none bg-white"
+            className="focus:outline-none p-3 rounded-lg rounded-r-none bg-white text-black"
           />
           <button
             className="p-2 text-black bg-white font-bold rounded-xl h-12 rounded-l-none -ml-4 "
