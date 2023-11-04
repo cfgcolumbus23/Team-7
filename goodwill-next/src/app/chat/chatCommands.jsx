@@ -7,4 +7,6 @@ function createMessage(sender,recipient,message){
     return c;
 }
 
-
+function openChannel(user1,user2){
+    return new Channel(user1,user2);
+}
