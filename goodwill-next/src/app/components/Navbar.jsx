@@ -27,7 +27,7 @@ const Navbar = ({ mobile, setMobile }) => {
               router.push("/");
             }}
           >
-            <li className="text-white hover:text-gray-300 font-semibold">
+            <li className="text-white transform transition duration-300 hover:underline underline-offset-4 hover:scale-110 hover:text-gray-300 font-semibold">
               Home
             </li>
           </button>
@@ -37,7 +37,7 @@ const Navbar = ({ mobile, setMobile }) => {
               router.push("/socket");
             }}
           >
-            <li className="text-white hover:text-gray-300 font-semibold">
+            <li className="text-white transform transition duration-300 hover:scale-110 hover:underline underline-offset-4 hover:text-gray-300 font-semibold">
               Chat
             </li>
           </button>
@@ -47,19 +47,8 @@ const Navbar = ({ mobile, setMobile }) => {
               router.push("/announcements");
             }}
           >
-            <li className="text-white hover:text-gray-300 font-semibold">
+            <li className="text-white mr-10 transform transition duration-300 hover:scale-110 hover:underline underline-offset-4 font-semibold">
               Announcements
-            </li>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => {
-              router.push("/login");
-            }}
-          >
-            <li className="text-white hover:text-gray-300 px-4 py-2 rounded-full border border-white font-semibold">
-              Login
             </li>
           </button>
         </ul>
