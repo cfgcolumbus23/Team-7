@@ -30,7 +30,7 @@ const Tile = () => {
           router.push("/socket");
         }}
       >
-        <div className="bg-gray-200 transform transition duration-300 hover:scale-110 shadow-lg rounded-lg p-3 m-4 hover:bg-gray-300 hover:cursor-pointer">
+        <div className="bg-amber-500 transform transition duration-300 hover:scale-110 shadow-lg rounded-lg p-3 m-4 hover:bg-amber-400 hover:cursor-pointer">
           <div className="w-80 md:w-48 lg:w-72 h-72 bg-contain bg-center">
             <img
               src="/chat.webp"

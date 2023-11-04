@@ -3,9 +3,19 @@ import { validateUser, authenticate } from '../auth/server'
 import { useRouter } from 'next/navigation'
 import cookie from 'cookie'
 
+/**
+ * Renders the login page component.
+ *
+ * @returns {JSX.Element} The login page component.
+ */
 export default function Page() {
   const router = useRouter()
 
+  /**
+   * Handles the form submission event.
+   *
+   * @param {Event} event - The form submission event.
+   */
   async function onSubmit(event) {
     event.preventDefault()
     const username = event.target[0].value
