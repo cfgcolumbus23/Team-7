@@ -8,9 +8,7 @@ export default function NavBarGlobal() {
   return (
     <div>
       {isMobile ? (
-        <button>
-          <NavBar mobile={isMobile} setMobile={setIsMobile} />
-        </button>
+        <NavBar mobile={isMobile} setMobile={setIsMobile} />
       ) : (
         <NavBarMobile setMobile={setIsMobile} mobile={isMobile} />
       )}
