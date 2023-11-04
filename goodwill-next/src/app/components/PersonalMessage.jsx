@@ -19,7 +19,7 @@ export default function PersonalMessage() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="w-2/5 h-3/4 overflow-y-scroll overflow-hidden bg-goodwill-black rounded-md">
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 text-black mx-auto">
           {userMessages.map((message, index) => (
             <Message key={index} message={message} userIcon={currentUserIcon} />
           ))}
