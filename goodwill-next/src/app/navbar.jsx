@@ -9,7 +9,7 @@ const Navbar = () => {
               className="w-40 ml-4"
             />
           </div>
-          <h1 className="text-white text-2xl font-thin text-center italic">
+          <h1 className="text-white text-2xl font-semibold text-center italic">
               We believe in the power of work and opportunity for all
           </h1>
   
