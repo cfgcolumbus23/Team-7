@@ -1,3 +1,4 @@
+"use client";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 
@@ -10,7 +11,12 @@ export default function NavBarMobile({ Mobile, setMobile }) {
         className="h-10 w-10 cursor-pointer"
       />
       <ul className="flex flex-col justify-center items-center gap-10 text-sm font-semibold  hover:text-gray-600">
-        <button type="button" onClick={() => router.push("/home")}>
+        <button
+          type="button"
+          onClick={() => {
+            router.push("/home");
+          }}
+        >
           <li className="cursor-pointer">Home</li>
         </button>
         <button type="button" onClick={() => router.push("/chat")}>
