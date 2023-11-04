@@ -8,24 +8,31 @@ export default function Page() {
   const careerRef = useRef(null);
   const courseRef = useRef(null);
 
-  function handleClick() {
+  function handleNewsClick() {
     newsRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+  function handleCareerClick() {
     careerRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+  function handleOppoClick() {
     courseRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
     <div className="">
-      <div className="mt-40 text-black cursor-pointer">
-        <button onClick={handleClick}>Go to News</button>
+      <div className="flex items-center justify-evenly content-center w-full h-screen bg-gray-100">
+      <button className="text-black"onClick={handleNewsClick}>Go to News
+        </button>
+        <button className="text-black" onClick={handleCareerClick}>Go to Careers
+        </button>
+        <button className="text-black" onClick={handleOppoClick}>Go to Opportunities
+        </button>
       </div>
-      <div className=" w-full h-screen mt-96 text-black">
-        <h1>Section 1</h1>
-        <div ref = {newsRef} className="grid grid-cols-3 gap-4">
-          <div><NewsCard 
+        <div ref={newsRef} className="grid grid-cols-3 gap-4">
+        <div><NewsCard 
             info = ""
             title = ""
-            
+            ref = {careerRef} 
           />
           </div>
           <div><NewsCard 
@@ -38,12 +45,12 @@ export default function Page() {
             title = ""
           />
           </div>
-          
-          </div>
+        </div>
         <div ref={careerRef} className="grid grid-cols-3 gap-4">
         <div><NewsCard 
             info = ""
             title = ""
+            ref = {careerRef} 
           />
           </div>
           <div><NewsCard 
@@ -61,6 +68,7 @@ export default function Page() {
           <div><NewsCard 
             info = ""
             title = ""
+            ref = {courseRef}
           />
           </div>
           <div><NewsCard 
@@ -73,7 +81,7 @@ export default function Page() {
             title = ""
           />
         </div>
-      </div>
+
     </div>
     </div>
   );
