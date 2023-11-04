@@ -14,7 +14,7 @@ const Tile = () => {
         <div className="bg-gray-200 shadow-lg rounded-lg p-3 m-4 hover:bg-gray-300 hover:cursor-pointer">
           <div className="w-80 md:w-48 lg:w-72 h-72 bg-cover bg-center">
             <img
-              src="/announcements.jpeg"
+              src="/announcements_image.jpeg"
               alt="picture"
               className="h-2/3 w-full rounded-md"
             />
