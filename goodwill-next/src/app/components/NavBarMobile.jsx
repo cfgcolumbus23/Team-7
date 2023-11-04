@@ -29,7 +29,7 @@ export default function NavBarMobile({ Mobile, setMobile }) {
             Home
           </li>
         </button>
-        <button type="button" onClick={() => router.push("/chat")}>
+        <button type="button" onClick={() => router.push("/socket")}>
           <li onClick={() => setMobile(!Mobile)} className="cursor-pointer">
             Chat
           </li>
