@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function FooterMobile() {
+  const router = useRouter();
   return (
     <div className="bg-goodwill-blue bottom-0 overflow-x-hidden h-auto w-screen flex gap-10 flex-col justify-center content-center">
       <img
@@ -15,12 +17,14 @@ export default function FooterMobile() {
         >
           Our Leadership
         </a>
-        <a
-          className="hover:underline underline-offset-4"
-          href="https://www.goodwillcolumbus.org/contact/"
+        <button
+          type="button"
+          onClick={() => {
+            router.push("/contact");
+          }}
         >
-          Contact
-        </a>
+          <div className="hover:underline underline-offset-4">Contact</div>
+        </button>
         <a
           className="hover:underline underline-offset-4"
           href="https://www.goodwillcolumbus.org/news-events/"

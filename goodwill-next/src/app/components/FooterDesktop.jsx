@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <div className="bg-goodwill-blue bottom-0 h-auto w-full flex sm:flex-col justify-evenly gap-10 content-center flex-grow md:flex-row">
       <div className="w-10 md:w-auto flex gap-5 mb-10 md:ml-20 mt-10 flex-col">
@@ -49,12 +51,14 @@ export default function Footer() {
           >
             Our Leadership
           </a>
-          <a
-            className="hover:underline underline-offset-4"
-            href="https://www.goodwillcolumbus.org/contact/"
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/contact");
+            }}
           >
-            Contact
-          </a>
+            <div className="hover:underline underline-offset-4">Contact</div>
+          </button>
           <a
             className="hover:underline underline-offset-4"
             href="https://www.goodwillcolumbus.org/news-events/"

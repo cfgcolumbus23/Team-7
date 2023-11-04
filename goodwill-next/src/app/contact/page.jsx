@@ -2,7 +2,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="mt-28 bg-goodwill-blue text-center font-bold h-1/4 p-2">
+    <div className="mt-24 bg-goodwill-blue text-center font-bold h-1/4 p-2">
       <div className="w-screen text-white">
         <h1 className="text-4xl">Contact Us</h1>
         <h2 className="text-3xl mt-4">We’re here to help.</h2>
