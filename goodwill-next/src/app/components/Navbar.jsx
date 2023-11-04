@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 
 const Navbar = ({ mobile, setMobile }) => {
   const router = useRouter();
+
   return (
     <nav className="bg-goodwill-blue p-4 z-20 fixed w-screen top-0">
       <div className="container mx-auto flex justify-between items-center">
@@ -27,7 +28,7 @@ const Navbar = ({ mobile, setMobile }) => {
               router.push("/");
             }}
           >
-            <li className="text-white transform transition duration-300 hover:underline underline-offset-4 hover:scale-110 hover:text-gray-300 font-semibold">
+            <li className="text-white transform transition duration-300 hover:underline underline-offset-4 hover:scale-110 font-semibold">
               Home
             </li>
           </button>
@@ -37,7 +38,7 @@ const Navbar = ({ mobile, setMobile }) => {
               router.push("/socket");
             }}
           >
-            <li className="text-white transform transition duration-300 hover:scale-110 hover:underline underline-offset-4 hover:text-gray-300 font-semibold">
+            <li className="text-white transform transition duration-300 hover:scale-110 hover:underline underline-offset-4 font-semibold">
               Chat
             </li>
           </button>
