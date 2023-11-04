@@ -1,4 +1,4 @@
-class channel{
+class Channel{
 
     constructor(user1,user2){
         this.user1 = user1;
@@ -7,6 +7,7 @@ class channel{
         this.u2Active = Boolean(false);
         this.chatHistory = new Array();
     }
+    
     setActive(user){
         if (user == this.user1){
             this.u1Active = Boolean(true);
