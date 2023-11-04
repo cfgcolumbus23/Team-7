@@ -3,7 +3,7 @@ import React from "react";
 
 export default function FooterMobile() {
   return (
-    <div className="bg-goodwill-blue overflow-x-hidden h-auto w-screen flex gap-10 flex-col justify-center content-center">
+    <div className="bg-goodwill-blue mt-60 overflow-x-hidden h-auto w-screen flex gap-10 flex-col justify-center content-center">
       <img
         className="w-80 mx-auto mt-10"
         src="https://goodwillmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/05/26162455/GWC_Logo_White.svg"

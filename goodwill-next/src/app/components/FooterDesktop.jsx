@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-goodwill-blue h-auto w-full flex sm:flex-col justify-evenly gap-10 content-center flex-grow md:flex-row">
+    <div className="bg-goodwill-blue mt-60 h-auto w-full flex sm:flex-col justify-evenly gap-10 content-center flex-grow md:flex-row">
       <div className="w-10 md:w-auto flex gap-5 mb-10 md:ml-20 mt-10 flex-col">
         <img
           className="md:w-80"
           src="https://goodwillmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/05/26162455/GWC_Logo_White.svg"
         ></img>
-        <div className="flex gap-5">
+        <div className="flex text-white gap-5">
           <a className="hover:underline underline-offset-4" href="">
             Sitemap
           </a>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col md:mr-20 md:w-auto justify-between w-60 border-red-800">
-        <div className="flex mt-10 gap-10 text-xl">
+        <div className="flex mt-10 text-white gap-10 text-xl">
           <a
             className="hover:underline underline-offset-4"
             href="https://www.goodwillcolumbus.org/our-leadership/"
