@@ -10,7 +10,11 @@
     "node": "node server.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@hookform/resolvers": "^3.3.2",
+=======
+    "@heroicons/react": "^2.0.18",
+>>>>>>> MA/NavbarResponsive
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
