@@ -51,7 +51,7 @@ const Tile = () => {
               alt="picture"
               className="h-2/3 w-full rounded-md"
             />
-            <p className="text-black mt-1">Click here for job oppurtunities.</p>
+            <p className="text-black mt-1">Click here for job opportunities.</p>
           </div>
         </div>
       </a>
