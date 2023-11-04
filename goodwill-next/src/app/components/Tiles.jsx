@@ -11,14 +11,14 @@ const Tile = () => {
           router.push("/announcements");
         }}
       >
-        <div className="bg-gray-200 shadow-lg transform transition duration-300 hover:scale-110 rounded-lg p-3 m-4 hover:bg-gray-300 hover:cursor-pointer">
+        <div className="bg-gray-200 shadow-lg transform transition duration-300 hover:scale-110 rounded-lg p-3 m-4 hover:bg-amber-400 hover:cursor-pointer">
           <div className="w-80 md:w-48 lg:w-72 h-72 bg-cover bg-center">
             <img
               src="/announcements_image.jpeg"
               alt="picture"
               className="h-2/3 w-full rounded-md"
             />
-            <p className="text-black text-4xl md:text-xl lg:text-3xl mt-8">
+            <p className="text-black text-3xl md:text-xl lg:text-3xl mt-8">
               ANNOUNCEMENTS
             </p>
           </div>
@@ -30,7 +30,7 @@ const Tile = () => {
           router.push("/socket");
         }}
       >
-        <div className="bg-gray-200 transform transition duration-300 hover:scale-110 shadow-lg rounded-lg p-3 m-4 hover:bg-gray-300 hover:cursor-pointer">
+        <div className="bg-gray-200 transform transition duration-300 hover:scale-110 shadow-lg rounded-lg p-3 m-4 hover:bg-amber-400 hover:cursor-pointer">
           <div className="w-80 md:w-48 lg:w-72 h-72 bg-contain bg-center">
             <img
               src="/chat.webp"
@@ -44,7 +44,7 @@ const Tile = () => {
         </div>
       </button>
       <a href="https://www.goodwillcolumbus.org/services/for-individuals/find-a-job/">
-        <div className="bg-gray-200 shadow-lg transform transition duration-300 hover:scale-110 rounded-lg p-3 m-4 hover:bg-gray-300 hover:cursor-pointer">
+        <div className="bg-gray-200 shadow-lg transform transition duration-300 hover:scale-110 rounded-lg p-3 m-4 hover:bg-amber-400 hover:cursor-pointer">
           <div className="w-80 md:w-48 lg:w-72 h-72 bg-cover bg-center">
             <img
               src="/job-opportunity.jpeg"

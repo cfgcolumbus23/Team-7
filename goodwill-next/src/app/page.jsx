@@ -1,6 +1,10 @@
 "use client";
 import Tiles from "./components/Tiles";
 
+/**
+ * Renders the Home page component.
+ * @returns {JSX.Element} The Home page component.
+ */
 export default function Home() {
   // get token from cookie
   let token = "";

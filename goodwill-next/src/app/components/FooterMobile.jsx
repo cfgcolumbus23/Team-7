@@ -8,7 +8,7 @@ export default function FooterMobile() {
         className="w-80 mx-auto mt-10"
         src="https://goodwillmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/05/26162455/GWC_Logo_White.svg"
       />
-      <div className="flex gap-10 text-lg mx-10">
+      <div className="flex gap-10 text-lg mx-auto">
         <a
           className="hover:underline underline-offset-4"
           href="https://www.goodwillcolumbus.org/our-leadership/"
