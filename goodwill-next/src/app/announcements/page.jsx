@@ -20,7 +20,7 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="flex justify-around mt-36 mx-4">
+      <div className="flex justify-around mt-48 mb-96 p-1 mx-4">
       <button className="text-black rounded-lg border border-2 p-2 bg-goodwill-blue text-white "onClick={handleNewsClick}>Go to News
         </button>
         <button className="text-black rounded-lg border border-2 p-2 bg-goodwill-blue text-white " onClick={handleCareerClick}>Go to Careers
@@ -28,7 +28,7 @@ export default function Page() {
         <button className="text-black rounded-lg border border-2 p-2 bg-goodwill-blue text-white " onClick={handleOppoClick}>Go to Opportunities
         </button>
       </div>
-        <div ref={newsRef} className="grid grid-cols-3 gap-4 text-center items-center justify-center">
+        <div ref={newsRef} className="grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center items-center justify-center">
         <div><NewsCard 
             info = "Click here to read more about the carrer at Goodwill!"
             title = "Company Info"
@@ -46,7 +46,7 @@ export default function Page() {
           />
           </div>
         </div>
-        <div ref={careerRef} className="grid grid-cols-3 gap-4 text-center">
+        <div ref={careerRef} className="grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center">
         <div><NewsCard 
             info = "Click here to read more about the latest education opportunities at Goodwill!"
             title = "Education News"
@@ -64,7 +64,7 @@ export default function Page() {
           />
           </div>
         </div>
-        <div ref={courseRef} className="grid grid-cols-3 gap-4"> 
+        <div ref={courseRef} className="grid grid-cols-3 mt-96 pt-52 mb-96 gap-4 text-center"> 
           <div><NewsCard 
             info = "Click here to read more about the latest education opportunities at Goodwill!"
             title = "Education"
@@ -82,7 +82,7 @@ export default function Page() {
           />
         </div>
 
-    </div>
-    </div>
+        </div>
+      </div>
   );
 }
