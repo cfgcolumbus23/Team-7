@@ -1,3 +1,4 @@
+import NavBarGlobal from "../components/NavBarGlobal";
 export default function Page() {
   return (
     <div>
