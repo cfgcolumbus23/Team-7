@@ -10,9 +10,6 @@ import { useRouter } from "next/navigation";
  * @returns {JSX.Element} - The mobile navigation bar component.
  */
 export default function NavBarMobile({ Mobile, setMobile }) {
-  // function code here
-}
-export default function NavBarMobile({ Mobile, setMobile }) {
   const router = useRouter();
   return (
     <div className="fixed bg-gray-100 top-0 bottom-0 right-0 w-full">

@@ -1,6 +1,7 @@
 'use client'
 import { validateUser, authenticate } from '../auth/server'
 import { useRouter } from 'next/navigation'
+import cookie from 'cookie'
 
 export default function Page() {
   const router = useRouter()
@@ -19,6 +20,12 @@ export default function Page() {
       let res = await authenticate(username, password)
       if (res) {
         console.log('success')
+
+        // set cookie
+        document.cookie = cookie.serialize('token', username, {
+          maxAge: 60 * 60, // 1 hour
+          path: '/',
+        })
 
         // redirect to home page
         router.push('/')

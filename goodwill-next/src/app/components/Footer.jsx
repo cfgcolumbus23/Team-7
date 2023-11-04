@@ -5,6 +5,7 @@ import FooterMobile from "./FooterMobile";
 
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
     return window.innerWidth < 768;
   });
 
