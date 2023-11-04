@@ -27,7 +27,7 @@ const Navbar = ({ mobile, setMobile }) => {
           <button
             type="button"
             onClick={() => {
-              router.push("/chat");
+              router.push("/socket");
             }}
           >
             <li className="text-white hover:text-gray-300 font-semibold">
