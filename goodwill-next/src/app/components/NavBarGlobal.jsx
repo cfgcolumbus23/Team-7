@@ -7,10 +7,8 @@ export default function NavBarGlobal() {
   const [isMobile, setIsMobile] = useState(true);
   return (
     <div>
-      {isMobile ? (
-        <button>
+      {isMobile ? ( 
           <NavBar mobile={isMobile} setMobile={setIsMobile} />
-        </button>
       ) : (
         <NavBarMobile setMobile={setIsMobile} mobile={isMobile} />
       )}
