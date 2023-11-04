@@ -93,7 +93,10 @@ var users = [];
 const loadUsers = () => {
     users = [
         new User('admin', 'admin12345', 'admin'),
+        new User('bossman', 'bossman12345', 'admin'),
         new User('employee', 'emp12345', 'employee'),
+        new User('employee2', 'cust12345', 'employee'),
+        new User('tyler', 'tyler12345', 'employee'),
     ];
 }
 
