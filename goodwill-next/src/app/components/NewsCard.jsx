@@ -2,7 +2,7 @@
 export default function NewsCard({ title, info }) {
   const shorterText = info.length > 100 ? info.substring(0, 100) + "..." : info;
   return (
-    <div className="flex flex-col bg-goodwill-white p-5 rounded-lg shadow-lg gap-4">
+    <div className="flex flex-col bg-goodwill-white p-5 rounded-lg shadow-lg gap-4 text-black">
       <h1 className=" text-4xl ml-3 my-2 hover:text-white-500 hover:underline cursor-pointer">
         {title}
       </h1>

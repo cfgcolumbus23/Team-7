@@ -1,3 +1,4 @@
+'use client';
 import NewsCardContain from "./../components/NewsCardContain";
 import {useRef} from 'react';
 import NewsCard from "./../components/NewsCard";
@@ -19,29 +20,29 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="flex items-center justify-evenly content-center w-full h-screen bg-gray-100">
-      <button className="text-black"onClick={handleNewsClick}>Go to News
+      <div className="flex justify-around mt-36 mx-4">
+      <button className="text-black rounded-lg border border-2 p-2 bg-goodwill-blue text-white "onClick={handleNewsClick}>Go to News
         </button>
-        <button className="text-black" onClick={handleCareerClick}>Go to Careers
+        <button className="text-black rounded-lg border border-2 p-2 bg-goodwill-blue text-white " onClick={handleCareerClick}>Go to Careers
         </button>
-        <button className="text-black" onClick={handleOppoClick}>Go to Opportunities
+        <button className="text-black rounded-lg border border-2 p-2 bg-goodwill-blue text-white " onClick={handleOppoClick}>Go to Opportunities
         </button>
       </div>
-        <div ref={newsRef} className="grid grid-cols-3 gap-4">
+        <div ref={newsRef} className="grid grid-cols-3 gap-4 center-text">
         <div><NewsCard 
-            info = ""
-            title = ""
+            info = "Click here to read more about the latest news at Goodwill!"
+            title = "Comapny News"
             ref = {careerRef} 
           />
           </div>
           <div><NewsCard 
-            info = ""
-            title = ""
+            info = "Click here to read about carrer opportunities at Goodwill!"
+            title = "Career"
           />
           </div>
           <div><NewsCard 
-            info = ""
-            title = ""
+            info = "Click here to read more about the latest education opportunities at Goodwill!"
+            title = "Education"
           />
           </div>
         </div>
