@@ -51,6 +51,7 @@ const Navbar = ({ mobile, setMobile }) => {
               Announcements
             </li>
           </button>
+
           <button
             type="button"
             onClick={() => {
