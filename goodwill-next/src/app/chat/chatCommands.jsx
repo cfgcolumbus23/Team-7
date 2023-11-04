@@ -1,14 +1,16 @@
+import { channel } from "diagnostics_channel";
 
 
 function createMessage(sender,recipient,message){
-    c = new chat(sender,recipient,message);
+    c = new chatStructure(sender,recipient,message);
     return c;
 }
 
-function openChannel(user1,user2){
-    return new Channel(user1,user2);
-}
 
+
+function postMessage(channel,chat){
+    channel.addChat(channel);
+}
 
 
 function loadChannels(){
@@ -19,6 +21,20 @@ function loadChannels(){
      
 }
 loadChannels();
+
+function openChannel(user1,user2){
+   
+    for (const channel of channels){
+        if(channel.user1 == user1 && channel.user2 == user2){
+            return channel;
+        }
+        else if(channel.user2 == user1 && channel.user1 == user2){
+            return channel;
+        }
+    }
+
+    return new Channel(user1,user2);
+}
 
 function enterChannel(user, channel){
     channel.setActive(user);
