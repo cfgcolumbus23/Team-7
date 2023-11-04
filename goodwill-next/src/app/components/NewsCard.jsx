@@ -1,10 +1,4 @@
-/**
- * A component that displays a news card with a title, information, and a "Read More" button.
- * @param {Object} props - The props object containing the title and info of the news card.
- * @param {string} props.title - The title of the news card.
- * @param {string} props.info - The information of the news card.
- * @returns {JSX.Element} - The NewsCard component.
- */
+
 export default function NewsCard({ title, info }) {
   const shorterText = info.length > 100 ? info.substring(0, 100) + "..." : info;
   return (

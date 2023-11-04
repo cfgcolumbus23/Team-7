@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
  * @param {function} props.setMobile - A function to set the state of the mobile navigation bar.
  * @returns {JSX.Element} - The mobile navigation bar component.
  */
+
 export default function NavBarMobile({ Mobile, setMobile }) {
   const router = useRouter();
   return (
