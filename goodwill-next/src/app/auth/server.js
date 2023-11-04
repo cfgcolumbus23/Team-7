@@ -2,9 +2,10 @@
 import { z } from 'zod';
 
 class User {
-    constructor(username, password, type) {
+    constructor(username, password, role) {
         this.username = username;
         this.password = password;
+        this.role = role;
     }
 
     static async hashPassword(password) {
@@ -28,6 +29,7 @@ class User {
 const UserSchema = z.object({
     username: z.string().min(3),
     password: z.string().min(8),
+    role: z.string().optional(),
 });
 
 // validate the user object
@@ -50,8 +52,8 @@ var users = [];
 // load the array from goodwill-next/data/users.json
 const loadUsers = () => {
     users = [
-        new User('admin', 'admin12345'),
-        new User('user', 'user12345'),
+        new User('admin', 'admin12345', 'admin'),
+        new User('employee', 'emp12345', 'employee'),
     ];
 }
 
