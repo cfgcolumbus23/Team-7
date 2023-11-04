@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
+import NavBarGlobal from "../components/NavBarGlobal";
 export default function Page() {
   return (
     <div>
       <h1>Home</h1>
-      <Navbar />
+      <NavBarGlobal />
     </div>
   );
 }
