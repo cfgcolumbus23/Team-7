@@ -17,13 +17,19 @@ export default function NavBarMobile({ Mobile, setMobile }) {
             router.push("/home");
           }}
         >
-          <li className="cursor-pointer">Home</li>
+          <li onClick={() => setMobile(!Mobile)} className="cursor-pointer">
+            Home
+          </li>
         </button>
         <button type="button" onClick={() => router.push("/chat")}>
-          <li className="cursor-pointer">Chat</li>
+          <li onClick={() => setMobile(!Mobile)} className="cursor-pointer">
+            Chat
+          </li>
         </button>
         <button type="button" onClick={() => router.push("/announcements")}>
-          <li className="cursor-pointer">Announcments</li>
+          <li onClick={() => setMobile(!Mobile)} className="cursor-pointer">
+            Announcments
+          </li>
         </button>
       </ul>
     </div>
