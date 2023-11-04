@@ -1,5 +1,5 @@
-'use client'
-import Tiles from './components/Tiles'
+"use client";
+import Tiles from "./components/Tiles";
 
 /**
  * Renders the Home page component.
@@ -7,23 +7,23 @@ import Tiles from './components/Tiles'
  */
 export default function Home() {
   // get token from cookie
-  let token = ''
-  if (typeof window !== 'undefined') {
+  let token = "";
+  if (typeof window !== "undefined") {
     try {
       token = document.cookie
-        .split('; ')
-        .find((row) => row.startsWith('token'))
-        .split('=')[1]
+        .split("; ")
+        .find((row) => row.startsWith("token"))
+        .split("=")[1];
     } catch (e) {
-      console.log('error getting token from cookie')
+      console.log("error getting token from cookie");
     }
   }
 
   return (
-    <main className='flex flex-col overflow-x-hidden items-center justify-between p-28'>
+    <main className="flex flex-col overflow-x-hidden items-center justify-between p-28">
       <div>
         <Tiles />
       </div>
     </main>
-  )
+  );
 }

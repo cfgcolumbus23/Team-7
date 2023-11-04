@@ -1,27 +1,27 @@
-'use client'
-import styles from './page.module.css'
-import { io } from 'socket.io-client'
-import { useState } from 'react'
-import ChatPage from './chat'
-import { matchUserstoRoom } from './id'
+"use client";
+import styles from "./page.module.css";
+import { io } from "socket.io-client";
+import { useState } from "react";
+import ChatPage from "./chat";
+import { matchUserstoRoom } from "./id";
 
 /**
  * Renders the Home page component.
  * @returns {JSX.Element} The Home page component.
  */
 export default function Home() {
-  const [showChat, setShowChat] = useState(false)
-  const [userName, setUserName] = useState('')
-  const [showSpinner, setShowSpinner] = useState(false)
-  const [otherUser, setOtherUser] = useState('')
-  const [roomId, setRoomId] = useState('')
+  const [showChat, setShowChat] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [showSpinner, setShowSpinner] = useState(false);
+  const [otherUser, setOtherUser] = useState("");
+  const [roomId, setRoomId] = useState("");
 
-  var socket
+  var socket;
   socket = io(
-    'http://localhost:3001',
-    { transports: ['websocket'] },
-    { 'force new connection': true }
-  )
+    "http://localhost:3001",
+    { transports: ["websocket"] },
+    { "force new connection": true }
+  );
 
   /**
    * Handles the join button click event.
@@ -30,50 +30,50 @@ export default function Home() {
    * After 1 second, shows the chat and hides the spinner.
    */
   const handleJoin = () => {
-    if (userName !== '' && otherUser !== '') {
-      socket.emit('join_room', userName, otherUser)
-      setRoomId(matchUserstoRoom(userName, otherUser).id)
-      setShowSpinner(true)
+    if (userName !== "" && otherUser !== "") {
+      socket.emit("join_room", userName, otherUser);
+      setRoomId(matchUserstoRoom(userName, otherUser).id);
+      setShowSpinner(true);
       setTimeout(() => {
-        setShowChat(true)
-        setShowSpinner(false)
-      }, 1)
+        setShowChat(true);
+        setShowSpinner(false);
+      }, 1);
     } else {
       alert(
-        'Please fill in your username and the username of the person you want to chat with'
-      )
+        "Please fill in your username and the username of the person you want to chat with"
+      );
     }
-  }
+  };
 
   return (
     <div>
       <div
         className={styles.main_div}
-        style={{ display: showChat ? 'none' : '' }}
+        style={{ display: showChat ? "none" : "" }}
       >
         <input
           className={styles.main_input}
-          type='text'
-          placeholder='Username'
+          type="text"
+          placeholder="Username"
           onChange={(e) => setUserName(e.target.value)}
           disabled={showSpinner}
         />
         <input
           className={styles.main_input}
-          type='text'
-          placeholder='other user'
+          type="text"
+          placeholder="other user"
           onChange={(e) => setOtherUser(e.target.value)}
           disabled={showSpinner}
         />
         <button className={styles.main_button} onClick={() => handleJoin()}>
           {!showSpinner ? (
-            'Join'
+            "Join"
           ) : (
             <div className={styles.loading_spinner}></div>
           )}
         </button>
       </div>
-      <div style={{ display: !showChat ? 'none' : '' }}>
+      <div style={{ display: !showChat ? "none" : "" }}>
         <ChatPage
           socket={socket}
           roomId={roomId}
@@ -82,5 +82,5 @@ export default function Home() {
         />
       </div>
     </div>
-  )
+  );
 }

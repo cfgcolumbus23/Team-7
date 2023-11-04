@@ -18,7 +18,7 @@ const Tile = () => {
               alt="picture"
               className="h-2/3 w-full rounded-md"
             />
-            <p className="text-black text-4xl md:text-xl lg:text-3xl mt-8">
+            <p className="text-black text-3xl md:text-xl lg:text-3xl mt-8">
               ANNOUNCEMENTS
             </p>
           </div>
