@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const Navbar = ({ mobile, setMobile }) => {
   const router = useRouter();
   return (
-    <nav className="bg-goodwill-blue p-4 fixed w-screen top-0">
+    <nav className="bg-goodwill-blue p-4 z-20 fixed w-screen top-0">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <button

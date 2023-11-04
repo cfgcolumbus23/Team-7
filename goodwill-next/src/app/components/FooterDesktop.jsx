@@ -3,12 +3,12 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-goodwill-blue h-auto w-full flex sm:flex-col justify-evenly gap-10 content-center flex-grow md:flex-row">
+    <div className="bg-goodwill-blue bottom-0 h-auto w-full flex sm:flex-col justify-evenly gap-10 content-center flex-grow md:flex-row">
       <div className="w-10 md:w-auto flex gap-5 mb-10 md:ml-20 mt-10 flex-col">
         <img
           className="md:w-80"
           src="https://goodwillmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/05/26162455/GWC_Logo_White.svg"
-        ></img>
+        />
         <div className="flex text-white gap-5">
           <a className="hover:underline underline-offset-4" href="">
             Sitemap
