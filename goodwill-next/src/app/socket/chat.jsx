@@ -47,8 +47,6 @@ const ChatPage = ({ socket, username, otherUser, roomId }) => {
           <p className={style.chat_title}>Chat with {otherUser}</p>
         </div>
         <div>
-          {/* add scroll as needed */}
-
           {chat.map(({ roomId, user, msg, time }, key) => (
             <div
               key={key}
@@ -66,6 +64,9 @@ const ChatPage = ({ socket, username, otherUser, roomId }) => {
               </span>
               <h3 style={{ textAlign: user == username ? 'right' : 'left' }}>
                 {msg}
+                <br />
+                {/* small font timestamp */}
+                <span className='text-xs text-gray-500'>{time}</span>
               </h3>
             </div>
           ))}
@@ -73,7 +74,7 @@ const ChatPage = ({ socket, username, otherUser, roomId }) => {
         <div>
           <form onSubmit={(e) => sendData(e)}>
             <input
-              className={style.chat_input + ' ' + style.chat_border}
+              className={style.chat_input + ' ' + style.chat_border + 'h-15'}
               type='text'
               value={currentMsg}
               placeholder='Type your message..'
@@ -87,7 +88,7 @@ const ChatPage = ({ socket, username, otherUser, roomId }) => {
                 viewBox='0 0 24 24'
                 strokeWidth={1.5}
                 stroke='currentColor'
-                className='w-12 h-12'
+                className='w-10 h-10'
               >
                 <path
                   strokeLinecap='round'
