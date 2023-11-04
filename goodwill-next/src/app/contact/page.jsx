@@ -9,13 +9,13 @@ export default function page() {
       </div>
       <div className="w-screen flex justify-around my-9 ">
         <button className="p-4 bg-goodwill-blue text-white border-2 border-white rounded-full  hover:bg-white hover:text-black transition-all duration-150">
-          General Inqury
+          General Inquiry
         </button>
         <button className="p-4 bg-goodwill-blue text-white border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-150">
-          General Inqury
+          General Inquiry
         </button>
         <button className="p-4 bg-goodwill-blue text-white border-2 border-white rounded-full hover:bg-white hover:text-black transition-all duration-150">
-          General Inqury
+          General Inquiry
         </button>
       </div>
       <div className="bg-white p-4 h-screen">
