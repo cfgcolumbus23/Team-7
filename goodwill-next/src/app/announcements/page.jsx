@@ -1,1 +1,9 @@
-export default function Page() {}
+import NewsCardContain from "./../components/NewsCardContain";
+
+export default function Page() {
+  return (
+    <div>
+      <NewsCardContain />
+    </div>
+  );
+}
