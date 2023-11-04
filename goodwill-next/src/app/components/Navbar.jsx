@@ -1,7 +1,9 @@
 "use client";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import { useRouter } from "next/navigation";
 
 const Navbar = ({ mobile, setMobile }) => {
+  const router = useRouter();
   return (
     <nav className="bg-goodwill-blue p-4 fixed w-screen top-0">
       <div className="container mx-auto flex justify-between items-center">
@@ -12,38 +14,46 @@ const Navbar = ({ mobile, setMobile }) => {
           We believe in the power of work and opportunity for all
         </h1>
         <ul className="hidden md:flex space-x-5 ">
-          <li>
-            <a
-              href="#"
-              className=" text-white hover:text-gray-300 font-semibold"
-            >
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            <li className="text-white hover:text-gray-300 font-semibold">
               Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-white hover:text-gray-300 font-semibold"
-            >
+            </li>
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/chat");
+            }}
+          >
+            <li className="text-white hover:text-gray-300 font-semibold">
               Chat
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-white hover:text-gray-300 font-semibold"
-            >
+            </li>
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/announcements");
+            }}
+          >
+            <li className="text-white hover:text-gray-300 font-semibold">
               Announcements
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-white hover:text-gray-300 px-4 py-2 rounded-full border border-white font-semibold"
-            >
+            </li>
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/login");
+            }}
+          >
+            <li className="text-white hover:text-gray-300 px-4 py-2 rounded-full border border-white font-semibold">
               Login
-            </a>
-          </li>
+            </li>
+          </button>
         </ul>
 
         <Bars3Icon
