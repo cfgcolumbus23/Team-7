@@ -1,5 +1,9 @@
 import NewsCard from "./../components/NewsCard";
 
+/**
+ * Renders a page with a grid of NewsCard components.
+ * @returns {JSX.Element} The Page component.
+ */
 export default function Page() {
   return (
     <div className="w-full h-screen flex items-center justify-center">
