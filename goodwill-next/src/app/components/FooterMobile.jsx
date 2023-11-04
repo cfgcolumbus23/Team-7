@@ -7,7 +7,7 @@ export default function FooterMobile() {
       <img
         className="w-80 mx-auto mt-10"
         src="https://goodwillmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/05/26162455/GWC_Logo_White.svg"
-      ></img>
+      />
       <div className="flex gap-10 text-lg mx-10">
         <a
           className="hover:underline underline-offset-4"
