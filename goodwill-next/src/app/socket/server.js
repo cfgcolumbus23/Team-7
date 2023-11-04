@@ -5,6 +5,18 @@ const { matchUserstoRoom } = require("./id.js");
 
 const httpServer = http.createServer();
 
+/**
+ * Creates a new instance of the Socket.IO server.
+ *
+ * @param {http.Server} httpServer - The HTTP server instance to attach to.
+ * @param {Object} [options] - The options to use for the server.
+ * @param {Object} [options.cors] - The CORS configuration options.
+ * @param {string} [options.cors.origin] - The allowed origin for CORS requests.
+ * @param {string[]} [options.cors.methods] - The allowed HTTP methods for CORS requests.
+ * @param {string[]} [options.cors.allowedHeaders] - The allowed headers for CORS requests.
+ * @param {boolean} [options.cors.credentials] - Whether to allow credentials for CORS requests.
+ * @returns {Server} The newly created Socket.IO server instance.
+ */
 const io = new Server(httpServer, {
     cors: {
         origin: "http://localhost:3000/socket", // Replace with your frontend URL

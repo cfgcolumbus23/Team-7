@@ -20,6 +20,11 @@ const createId = () => {
     initialId += 1;
 }
 
+/**
+ * Finds or creates a room for the given users.
+ * @param {string[]} users - An array of user IDs.
+ * @returns {object} - The room object containing the given users.
+ */
 const matchUserstoRoom = (users) => {
     // check if both users are in the same room
     // if not, create a new room

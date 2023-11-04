@@ -1,26 +1,66 @@
 'use server';
 import { z } from 'zod';
 
+/**
+ * Represents a user in the system.
+ * @class
+ */
 class User {
+    /**
+     * Creates a new User instance.
+     * @constructor
+     * @param {string} username - The username of the user.
+     * @param {string} password - The password of the user.
+     * @param {string} role - The role of the user.
+     */
     constructor(username, password, role) {
         this.username = username;
         this.password = password;
         this.role = role;
     }
 
+    /**
+     * Hashes the given password.
+     * @static
+     * @async
+     * @param {string} password - The password to hash.
+     * @returns {Promise<string>} A promise that resolves with the hashed password.
+     */
     static async hashPassword(password) {
         return hashString(password);
     }
 
+    /**
+     * Compares the given password with the user's password.
+     * @async
+     * @param {string} password - The password to compare.
+     * @returns {Promise<boolean>} A promise that resolves with a boolean indicating whether the passwords match.
+     */
     async comparePassword(password) {
         return compareHash(password, this.password);
     }
 
+    /**
+     * Creates a new User instance with the given username and password.
+     * @static
+     * @async
+     * @param {string} username - The username of the user.
+     * @param {string} password - The password of the user.
+     * @returns {Promise<User>} A promise that resolves with a new User instance.
+     */
     static async create(username, password) {
         const hashedPassword = await User.hashPassword(password);
         return new User(username, hashedPassword);
     }
 
+    /**
+     * Creates a new admin User instance with the given username and password.
+     * @static
+     * @async
+     * @param {string} username - The username of the admin user.
+     * @param {string} password - The password of the admin user.
+     * @returns {Promise<User>} A promise that resolves with a new admin User instance.
+     */
     static async createAdmin(username, password) {
         return User.create(username, password, 'admin');
     }

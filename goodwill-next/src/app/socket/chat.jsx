@@ -2,6 +2,15 @@
 import React, { useEffect, useState } from 'react'
 import style from './chat.module.css'
 
+/**
+ * A component that renders a chat page.
+ * @param {Object} props - The props object.
+ * @param {Object} props.socket - The socket object.
+ * @param {string} props.username - The username of the current user.
+ * @param {string} props.otherUser - The username of the other user.
+ * @param {string} props.roomId - The ID of the chat room.
+ * @returns {JSX.Element} - A JSX element representing the chat page.
+ */
 const ChatPage = ({ socket, username, otherUser, roomId }) => {
   const [currentMsg, setCurrentMsg] = useState('')
   const [chat, setChat] = useState([])

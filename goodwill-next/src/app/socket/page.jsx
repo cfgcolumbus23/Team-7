@@ -5,6 +5,10 @@ import { useState } from 'react'
 import ChatPage from './chat'
 import { matchUserstoRoom } from './id'
 
+/**
+ * Renders the Home page component.
+ * @returns {JSX.Element} The Home page component.
+ */
 export default function Home() {
   const [showChat, setShowChat] = useState(false)
   const [userName, setUserName] = useState('')
@@ -15,17 +19,21 @@ export default function Home() {
   var socket
   socket = io('http://localhost:3001', { transports: ['websocket'] })
 
+  /**
+   * Handles the join button click event.
+   * Emits a 'join_room' event to the server with the user names.
+   * Sets the room ID and shows the spinner.
+   * After 1 second, shows the chat and hides the spinner.
+   */
   const handleJoin = () => {
     if (userName !== '' && otherUser !== '') {
-      //   console.log(userName, 'userName', roomId, 'roomId')
       socket.emit('join_room', userName, otherUser)
       setRoomId(matchUserstoRoom(userName, otherUser).id)
       setShowSpinner(true)
-      // You can remove this setTimeout and add your own logic
       setTimeout(() => {
         setShowChat(true)
         setShowSpinner(false)
-      }, 4000)
+      }, 1)
     } else {
       alert(
         'Please fill in your username and the username of the person you want to chat with'
