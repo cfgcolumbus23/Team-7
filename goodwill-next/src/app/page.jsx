@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Tiles from './components/Tiles'
-
+import Tiles from "./components/Tiles";
 
 export default function Home() {
   const router = useRouter();

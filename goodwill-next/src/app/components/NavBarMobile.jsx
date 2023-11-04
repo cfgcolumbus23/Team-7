@@ -2,6 +2,16 @@
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 
+/**
+ * Renders a mobile navigation bar with Home, Chat, and Announcements links.
+ * @param {Object} props - The component props.
+ * @param {boolean} props.Mobile - A boolean indicating whether the mobile navigation bar is open or closed.
+ * @param {function} props.setMobile - A function to set the state of the mobile navigation bar.
+ * @returns {JSX.Element} - The mobile navigation bar component.
+ */
+export default function NavBarMobile({ Mobile, setMobile }) {
+  // function code here
+}
 export default function NavBarMobile({ Mobile, setMobile }) {
   const router = useRouter();
   return (
