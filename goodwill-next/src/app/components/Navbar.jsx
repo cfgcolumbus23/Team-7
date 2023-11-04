@@ -1,9 +1,7 @@
 "use client";
 import { Bars3Icon } from "@heroicons/react/24/solid";
-import { useRouter } from "next/navigation";
 
 const Navbar = ({ mobile, setMobile }) => {
-  const router = useRouter();
   return (
     <nav className="bg-goodwill-blue p-4 fixed w-screen">
       <div className="container mx-auto flex justify-between items-center">
@@ -14,21 +12,30 @@ const Navbar = ({ mobile, setMobile }) => {
           We believe in the power of work and opportunity for all
         </h1>
         <ul className="hidden md:flex space-x-5 ">
-          <button type="button" onClick={() => router.push("/home")}>
-            <li className="text-white hover:text-gray-300 font-semibold">
+          <li>
+            <a
+              href="#"
+              className=" text-white hover:text-gray-300 font-semibold"
+            >
               Home
-            </li>
-          </button>
-          <button type="button" onClick={() => router.push("/chat")}>
-            <li className="text-white hover:text-gray-300 font-semibold">
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white hover:text-gray-300 font-semibold"
+            >
               Chat
-            </li>
-          </button>
-          <button type="button" onClick={() => router.push("/announcements")}>
-            <li className="text-white hover:text-gray-300 font-semibold">
-              Announcments
-            </li>
-          </button>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white hover:text-gray-300 font-semibold"
+            >
+              Announcements
+            </a>
+          </li>
           <li>
             <a
               href="#"
