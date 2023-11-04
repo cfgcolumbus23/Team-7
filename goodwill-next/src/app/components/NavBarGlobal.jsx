@@ -5,11 +5,13 @@ import NavBarMobile from "./NavBarMobile";
 import { useState } from "react";
 
 export default function NavBarGlobal() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   return (
     <div>
       {isMobile ? (
-        <NavBar mobile={isMobile} setMobile={setIsMobile} />
+        <button>
+          <NavBar mobile={isMobile} setMobile={setIsMobile} />
+        </button>
       ) : (
         <NavBarMobile setMobile={setIsMobile} mobile={isMobile} />
       )}
