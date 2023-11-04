@@ -14,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <NavBarGlobal />
-        <main>{children}</main>
-        <Footer />
+        <main>
+          <NavBarGlobal />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
