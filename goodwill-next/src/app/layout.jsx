@@ -10,5 +10,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <Footer />;
+  return (
+    <html>
+      <body>
+        <Footer />
+        <main>{children}</main>
+      </body>
+    </html>
+  );
 }
