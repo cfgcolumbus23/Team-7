@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Page() {
   return (
-    <div className="mt-28 bg-goodwill-blue text-center w-screen">
+    <div className="mt-24 bg-goodwill-blue text-center w-screen">
       <h1 className="text-6xl text-white font-bold  p-12 ">
         Unarmed Security Guard Hiring Event
       </h1>
