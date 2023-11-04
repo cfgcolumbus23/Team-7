@@ -27,7 +27,7 @@ const Tile = () => {
       <button
         type="button"
         onClick={() => {
-          router.push("/chat");
+          router.push("/socket");
         }}
       >
         <div className="bg-gray-200 transform transition duration-300 hover:scale-110 shadow-lg rounded-lg p-3 m-4 hover:bg-gray-300 hover:cursor-pointer">

@@ -13,7 +13,7 @@ import { useRouter } from "next/navigation";
 export default function NavBarMobile({ Mobile, setMobile }) {
   const router = useRouter();
   return (
-    <div className="fixed bg-gray-100 top-0 bottom-0 right-0 w-full">
+    <div className="fixed z-20 bg-gray-100 top-0 bottom-0 right-0 w-full">
       <XCircleIcon
         onClick={() => setMobile(!Mobile)}
         className="h-10 w-10 text-gray-600 cursor-pointer"
@@ -29,7 +29,7 @@ export default function NavBarMobile({ Mobile, setMobile }) {
             Home
           </li>
         </button>
-        <button type="button" onClick={() => router.push("/chat")}>
+        <button type="button" onClick={() => router.push("/socket")}>
           <li onClick={() => setMobile(!Mobile)} className="cursor-pointer">
             Chat
           </li>
