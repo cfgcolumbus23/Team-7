@@ -12,13 +12,7 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-<<<<<<< HEAD
       colors: { "goodwill-blue": "#1946AA" },
-=======
-      colors: {
-        "goodwill-blue": "#1946AA",
-      },
->>>>>>> NT/Footer
     },
   },
   plugins: [],
