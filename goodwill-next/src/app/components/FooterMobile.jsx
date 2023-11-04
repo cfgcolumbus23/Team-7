@@ -10,7 +10,7 @@ export default function FooterMobile() {
         className="w-80 mx-auto mt-10"
         src="https://goodwillmedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/05/26162455/GWC_Logo_White.svg"
       />
-      <div className="flex gap-10 text-lg mx-auto">
+      <div className="flex gap-10 text-lg mx-auto text-white">
         <a
           className="hover:underline underline-offset-4"
           href="https://www.goodwillcolumbus.org/our-leadership/"
@@ -38,7 +38,7 @@ export default function FooterMobile() {
           Goodwill Careers
         </a>
       </div>
-      <div className="flex gap-5 mx-auto p-0">
+      <div className="flex gap-5 mx-auto p-0 text-white">
         <a className="hover:underline underline-offset-4" href="">
           Sitemap
         </a>

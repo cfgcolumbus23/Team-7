@@ -20,21 +20,25 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className="flex justify-around mt-48 mb-96 p-1 mx-4">
+      <h1 className="bg-goodwill-blue text-6xl mt-24 pb-12 text-white text-center">
+        Learn More <br />
+        About Goodwill
+      </h1>
+      <div className="flex flex-col md:flex-row justify-center items-center content-center mt-32 gap-8 first-letter:mt-48 mb-96 p-1 mx-4">
         <div
-          className="text-xl text-black rounded-lg border-2 p-2 bg-goodwill-blue text-white pt-12 text-center w-48 h-32 cursor-pointer"
+          className="text-xl pt-12 md:pt-20 rounded-lg border-2 p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 text-center w-96 md:w-58 md:h-48 h-32 cursor-pointer"
           onClick={handleNewsClick}
         >
-          News
+          Company
         </div>
         <button
-          className="text-xl text-black rounded-lg border-2 p-2 bg-goodwill-blue text-white w-48 h-16"
+          className="text-xl rounded-lg border-2 p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 w-96 md:w-58 md:h-48 h-32"
           onClick={handleCareerClick}
         >
           Careers
         </button>
         <button
-          className="text-xl text-black rounded-lg border-2 p-2 bg-goodwill-blue text-white w-48 h-16 "
+          className="text-xl rounded-lg border-2 p-2 bg-goodwill-blue text-white hover:bg-sky-500 transform transition duration-300 hover:scale-110 w-96 md:w-58 md:h-48 h-32"
           onClick={handleOppoClick}
         >
           Opportunities
@@ -46,21 +50,21 @@ export default function Page() {
       >
         <div>
           <NewsCard
-            info="Click here to read more about the carrer at Goodwill."
+            info="Click here to read more about Goodwill's mission"
             title="Company Info"
             ref={careerRef}
           />
         </div>
         <div>
           <NewsCard
-            info="Click here to read about career modules at Goodwill."
-            title="Career Modules"
+            info="Click here to read more about Goodwill's mission"
+            title="Company Info"
           />
         </div>
         <div>
           <NewsCard
-            info="Click here to read more about the latest career opportunities at Goodwill!"
-            title="Career Opportunities"
+            info="Click here to read more about Goodwill's mission"
+            title="Company Info"
           />
         </div>
       </div>
@@ -71,20 +75,20 @@ export default function Page() {
         <div>
           <NewsCard
             info="Click here to read more about the latest career opportunities at Goodwill."
-            title="Education News"
+            title="Career Info"
             ref={careerRef}
           />
         </div>
         <div>
           <NewsCard
-            info="Click here to learn more about the carrer modules at Goodwill."
-            title="Education Modules"
+            info="Click here to read more about the latest career opportunities at Goodwill."
+            title="Career Info"
           />
         </div>
         <div>
           <NewsCard
-            info="Click here to read more about the work at Goodwill!"
-            title="Education"
+            info="Click here to read more about the latest career opportunities at Goodwill."
+            title="Career Info"
           />
         </div>
       </div>
@@ -95,20 +99,20 @@ export default function Page() {
         <div>
           <NewsCard
             info="Click here to read more about the latest education opportunities at Goodwill."
-            title="Education News"
+            title="Education Opportunities"
             ref={courseRef}
           />
         </div>
         <div>
           <NewsCard
-            info="Click here to read more about the latest education opportunities at Goodwill!"
-            title="Education Modules"
+            info="Click here to read more about the latest education opportunities at Goodwill."
+            title="Education Opportunities"
           />
         </div>
         <div>
           <NewsCard
             info="Click here to read more about the latest education opportunities at Goodwill."
-            title="Education"
+            title="Education Opportunities"
           />
         </div>
       </div>
